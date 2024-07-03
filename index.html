@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Aditya's Portfolio</title>
+    <style></style>
+</head>
+<body>
+    <nav class="px-4 py-3 bg-gray-900 text-white ">
+        <div class="md:flex justify-evenly">
+                <div class=" flex text-white content-center text-xl font-bold"><img class="w-8 h-8 mx-2 rounded-full" src="./me.jpg" alt="">Aditya's Portfolio</div>
+                <ul class="md:flex content-evenly">
+                    <li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl bg-white text-black hover:bg-slate-600 px-2 py-1">Home</li>
+                    <a href="#about"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">About</li></a>
+                    <a href="#skill"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Skills</li></a>
+                    <a href="#project"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Projects</li></a>
+                    <a href="#academics"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Academics</li></a>
+                    <a href="#acheivements"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Acheivements</li></a>
+                    <a href="#work-experience"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Work Experience</li></a>
+                    <a href="#Contact"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Contact</li></a>
+                </ul>
+        </div>
+        <div class="md:flex  py-40 px-10 justify-around">
+            <div class="px-2 py-1 font-sans text-5xl content-evenly ">
+                <div class="text-yellow-500 text-xs">HELLO,</div>
+                I'm <span class="font-normal text-green-600">Aditya Kumar,<br>and I am</span><div id="info" class="font-semibold text-purple-700 drop-shadow-lg "> <span id="element"></span></div>
+                <div class="py-10">
+                    <ul class=" flex justify-around ">
+                        <li class="mx-3"><img src="physics.png"></li>
+                        <li class="mx-3"><img src="coding.png"></li>
+                        <li class="mx-3"><img src="html.png"></li>
+                        <li class="mx-3"><img src="nodejs.png"></li>
+                        <li class="mx-3"><img src="physics.png"></li>
+                        <li class="mx-3"><img src="physics.png"></li>
+                    </ul>
+                </div>
+                    
+            </div>
+            <div class="px-2 py-1 w-4/12 h-60 content-center">
+                <img class="animate-pulse" src="bg.webp" alt="/">
+            </div>
+        </div>
+    </nav>
+    <div class="md:flex bg-black content-center py-40"  id="about" >
+        <div class="AboutMe border-2 border-violet-700 rounded-xl flex-1 mx-10 my-5 px-10 py-5 justify-center">
+            <div class="heading justify-self-center text-5xl text-white font-bold font-sans ">ABOUT ME</div>
+            <div class="content content-evenly text-nowrap text-lg py-3 text-gray-700 ">I am a software developer specializing in web development using the MERN stack (MongoDB, Express.js, React, Node.js). I create dynamic and efficient web applications, managing everything from back-end database management with MongoDB to server-side logic with Express.js and Node.js, ensuring robust performance and scalability. On the front end, I utilize React to build interactive, user-friendly interfaces. My skills include JavaScript, RESTful APIs, and deployment practices, making me adept at both full-stack development and modern web technologies. My role is crucial in delivering seamless, responsive, and high-performing web solutions.</div>
+            <button class="border-2 border-gray-400 text-center text-white hover:bg-white text-xl hover:text-black px-2 py-1 rounded-xl mx-2 my-3">Resume</button>
+            <button class="border-2 border-gray-400 text-center text-white hover:bg-white text-xl hover:text-black px-2 py-1 rounded-xl mx-2 my-3">GitHUB</button>
+        </div>
+    </div>
+    <div class=" md:flex-wrap px-10 py-5 text-3xl justify-center ">
+        <div class="flex justify-center my-5 text-5xl font-bold" id="skill">
+            SKILLS
+        </div>
+        <div class="flex px-5 py-2 text-3xl my-2">
+            <div class="w-1/4 mx-3">
+                <img src="/images/skills/c++.png" alt="" srcset="">
+            </div>
+            <div class="w-1/4 mx-3">
+                <img src="/images/skills/c.png" alt="" srcset="">
+            </div>
+            <div class="w-1/4 mx-3">
+                <img src="/images/skills/css.png" alt="" srcset="">
+            </div>
+            <div class="w-1/4 mx-3">
+                <img src="/images/skills/dsa.jpg" alt="" srcset="">
+            </div><div class="w-1/4 mx-3">
+                <img src="/images/skills/expressjs.png" alt="" srcset="">
+            </div><div class="w-1/4 mx-3">
+                <img src="/images/skills/git.png" alt="" srcset="">
+            </div><div class="w-1/4 mx-3">
+                <img src="/images/skills/gitHUb.png" alt="" srcset="">
+            </div><div class="w-1/4 mx-3">
+                <img src="/images/skills/html.webp" alt="" srcset="">
+            </div>
+        </div>
+        <div class="flex px-5 py-2 text-3xl my-2">
+            <div class="w-1/4 mx-3">
+                <img src="images/skills/js.png" alt="" srcset="">
+            </div>
+            <div class="w-1/4 mx-3">
+                <img src="images/skills/kotlin.png" alt="" srcset="">
+            </div>
+            <div class="w-1/4 mx-3">
+                <img src="/images/skills/mongodb.webp" alt="" srcset="">
+            </div>
+            <div class="w-1/4 mx-3">
+                <img src="/images/skills/nodejs.png" alt="" srcset="">
+            </div><div class="w-1/4 mx-3">
+                <img src="/images/skills/react.png" alt="" srcset="">
+            </div><div class="w-1/4 mx-3">
+                <img src="/images/skills/render.jpg" alt="" srcset="">
+            </div><div class="w-1/4 mx-3">
+                <img src="/images/skills/tailwind.png" alt="" srcset="">
+            </div><div class="w-1/4 mx-3">
+                <img src="/images/skills/vite.png" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings:['Web Developer', 'Programmer','Web Designer','Student','Coder'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+</html>
