@@ -21,29 +21,64 @@
             transform: translateY(0);
           }
         }
-        .animate-fadeInUp {
-          animation: fadeInUp 1s ease-out forwards;
+        @media(max-width: 768) {
+                #flex-menu{
+                    display: none;
+                }
         }
+                
       </style>
 </head>
+
 <body class="overscroll-none">
     <nav class="px-4 py-3 text-white" style="background: linear-gradient(297deg,rgb(0, 0, 0),rgb(0, 27, 86));box-shadow: 10px -8px 23px black;">
-        <div class=" sd:block lg:flex justify-evenly">
-                <div class=" flex text-white content-center text-xl font-bold"><img class="w-8 h-8 mx-2 rounded-full" src="./me.jpg" alt="">Aditya's Portfolio</div>
-                <ul class="md:flex content-center">
-                    <li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl bg-white text-black hover:bg-slate-600 px-2 py-1">Home</li>
+        <div class=" block lg:flex justify-evenly z-50">
+                <div class=" flex text-white content-center text-xl font-bold md:justify-start justify-between"><img class="w-8 h-8 mx-2 rounded-full" src="./me.jpg" alt="">Aditya's Portfolio<div class="hamburger md:hidden" id="hamburger" ><img class="w-8 h-8 mx-2 rounded-full" src="./images/menu.jpg" alt=""></div></div>
+                <div class="right-1 left-full" style="position: fixed;
+                display: none;
+                top: 50px;
+                right:5px;
+                z-index: 40;
+                " id="cross">&#10007</div>
+                <ul class="md:hidden my-2
+                " id="flex-menu" style="
+                display: none;
+                padding: 10px 5px;
+                position: fixed;
+                top: 50px;
+                left:0px;
+                width: 100%;
+                opacity: 0.95;
+                z-index: 30; 
+                border-radius: 10px;
+                border:1px solid black;
+                opacity:0.9;
+                background:linear-gradient(100deg,rgb(0, 0, 0),rgb(0, 27, 86)); ;
+                
+                ">
+                    <li class="content-center mx-2 justify-evenly px-2 py-1 cursor-pointer border-b-2  hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1 ">Home</li>
+                    <a href="#about"><li class="content-center mx-2 justify-evenly px-2 py-1 cursor-pointer border-b-2  hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">About</li></a>
+                    <a href="#skill"><li class="content-center mx-2 justify-evenly px-2 py-1 cursor-pointer border-b-2  hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Skills</li></a>
+                    <a href="#project"><li class="content-center mx-2 justify-evenly px-2 py-1 cursor-pointer border-b-2  hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Projects</li></a>
+                    <a href="#academics"><li class="content-center mx-2 justify-evenly px-2 py-1 cursor-pointer border-b-2  hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Academics</li></a>
+                    <a href="#acheivement"><li class="content-center mx-2 justify-evenly px-2 py-1 cursor-pointer border-b-2  hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Acheivements</li></a>
+                    <a href="#experience"><li class="content-center mx-2 justify-evenly px-2 py-1 cursor-pointer border-b-2  hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Experience</li></a>
+                    <a href="#contact"><li class="content-center mx-2 justify-evenly px-2 py-1 cursor-pointer border-b-2  hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Contact</li></a>
+                </ul>
+                <ul class="hidden md:flex md:my-2  content-center">
+                    <li class="md:mx-0 mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl bg-white text-black hover:bg-slate-600 px-2 py-1">Home</li>
                     <a href="#about"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">About</li></a>
                     <a href="#skill"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Skills</li></a>
                     <a href="#project"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Projects</li></a>
                     <a href="#academics"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Academics</li></a>
-                    <a href="#acheivements"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Acheivements</li></a>
-                    <a href="#work-experience"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Work Experience</li></a>
-                    <a href="#Contact"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Contact</li></a>
+                    <a href="#acheivement"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Acheivements</li></a>
+                    <a href="#experience"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Experience</li></a>
+                    <a href="#contact"><li class="mx-2 px-2 py-1 cursor-pointer border-2 border-purple-900 rounded-3xl hover:bg-white hover:text-black hover:bg-slate-600 px-2 py-1">Contact</li></a>
                 </ul>
         </div>
-        <div class="md:flex  py-40 md:px-10 justify-evenly md:justify-around">
-            <div class=" md:w-3/5 px-2 py-1 text-3xl md:text-4xl content-center font-extrabold" style="font-family:Rubik Vinyl;">
-                It's Aditya Kumar,<br> I am a</span><div id="info" class="md:w-3/5 font-semibold text-red-600 md:text-5xl text-4xl" style="font-family:Nabla"><span id="element"></span></div>
+        <div class="md:flex py-40 md:px-10 justify-evenly md:justify-around">
+            <div class="md:w-3/5 px-2 py-1 text-3xl md:text-5xl content-center font-extrabold" style="font-family:Rubik Vinyl;"><span class="text-2xl">Hello,</span><br>
+                It's <span class="text-yellow-500">Aditya Kumar</span>,<br> I am a</span><div id="info" class="md:w-3/5 font-semibold text-red-600 md:text-5xl text-4xl" style="font-family:Rubik Vinyl"><span id="element"></span></div>
                     <ul class=" md:w-3/5 my-10 flex space-x-2 md:space-x-1 justify-center sm:justify-start">
                         <li class="w-1/12 content-center"><a target="_blank"  href="mailto:kraditya2073@gmail.com"><img  class=" block" src="/images/contact/mail.png"></a></li>
                         <li class="w-1/12 content-center"><a target="_blank"  href="https://wa.me/8434263937"><img src="/images/contact/whatsapp.png"></a></li>
@@ -60,9 +95,12 @@
         </div>
     </nav>
     <div class="md:flex bg-gray-900 content-center py-40"  id="about" style="background: linear-gradient(29deg,rgb(0, 0, 0),rgb(45, 45, 45));box-shadow: 10px -8px 23px black;" >
-        <div class="AboutMe border-2 border-violet-700 rounded-xl flex-1 mx-10 my-5 px-10 py-5 justify-center">
+        <div class="AboutMe border-2 border-violet-700 rounded-xl flex-1 mx-5 md:mx-10 my-5 px-5 md:px-10 py-5 justify-center">
             <div class="heading justify-self-center text-5xl text-white font-bold font-sans ">ABOUT ME</div>
-            <div class="content content-evenly text-nowrap text-lg py-3 text-gray-700 ">I am a software developer specializing in web development using the MERN stack (MongoDB, Express.js, React, Node.js). I create dynamic and efficient web applications, managing everything from back-end database management with MongoDB to server-side logic with Express.js and Node.js, ensuring robust performance and scalability. On the front end, I utilize React to build interactive, user-friendly interfaces. My skills include JavaScript, RESTful APIs, and deployment practices, making me adept at both full-stack development and modern web technologies. My role is crucial in delivering seamless, responsive, and high-performing web solutions.</div>
+            <div class=" flex-1 md:flex md:justify-evenly">
+            <div class="content content-evenly text-nowrap text-lg py-3 text-gray-700 md:w-3/5">I am a software developer specializing in web development using the MERN stack (MongoDB, Express.js, React, Node.js). I create dynamic and efficient web applications, managing everything from back-end database management with MongoDB to server-side logic with Express.js and Node.js, ensuring robust performance and scalability. On the front end, I utilize React to build interactive, user-friendly interfaces. My skills include JavaScript, RESTful APIs, and deployment practices, making me adept at both full-stack development and modern web technologies. My role is crucial in delivering seamless, responsive, and high-performing web solutions.</div>
+            <div class="py-5 md:mx-2 md:w-2/5 content-around"><img class="h-2/3 border-b-2 border-b-yellow-300 rounded-br-2xl rounded-tl-lg" src="./images/manit.webp" alt="#"></div>
+            </div>
             <button class="border-2 border-gray-400 text-center text-white hover:bg-white text-xl hover:text-black px-2 py-1 rounded-xl mx-2 my-3">Resume</button>
             <button class="border-2 border-gray-400 text-center text-white hover:bg-white text-xl hover:text-black px-2 py-1 rounded-xl mx-2 my-3">GitHUB</button>
         </div>
@@ -118,28 +156,28 @@
             </div>
         </div>
     </div>
-    <section class="projects px-10 py-5 bg-gray-900 text-white" style="text-shadow: 3px 3px 6px yellow;" id="project" style="box-shadow: 0 -7px 5px rgb(255, 8, 8);">
+    <section class="projects px-10 py-5 bg-black text-white" style="text-shadow: 3px 3px 6px yellow;" id="project" style="box-shadow: 0 -7px 5px rgb(255, 8, 8);">
         <div class="flex justify-center text-5xl font-bold" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">PROJECTS</div>
         <div class="block  sm:block sm:m-auto sm:w-[50%] lg:flex md:justify-evenly  lg:space-x-16 lg:mx-10 lg:my-5 ">
-            <div class="block my-5  border-2 border-blue-700 px-5 py-5 rounded-3xl text-3xl text-yellow-300" style="text-shadow: none;font-family:cursive;">Tooryanaad Samiti
+            <div class="block my-5  border-b-2 md:border-r-2 border-white px-5 py-5 rounded-3xl text-3xl text-yellow-300" style="text-shadow: none;font-family:cursive;">Tooryanaad Samiti
                 <!-- <div class="flex justify-center my-2"><img class="border rounded-2xl" src="/images/tooryanaad.jpg" alt=""></div> -->
             <div class="text-2xl  text-gray-400 my-4"><ul type="none"><li>Contributed mainly in the backend part and maintaining the database.</li><li>– Tools & technologies used:JavaScript, HTML/CSS, Node.js, React.js, MongoDB, Git, GitHub, VS Code</li><li>– Used React.js, Node.js, and MongoDB online database for storing and retrieving data, connected them using Axios
                 library.<li>- Added different components to the site such as forms for storing users for registering for different events or
                     recruitment</li></ul></div>
             </div>
-            <div class="block my-5  border-2 border-blue-700 px-5 py-5 rounded-3xl text-3xl text-yellow-300" style="text-shadow: none;font-family:cursive;">Tic Tac Toe
+            <div class="block my-5 border-b-2 md:border-r-2  border-white px-5 py-5 rounded-3xl text-3xl text-yellow-300" style="text-shadow: none;font-family:cursive;" >Tic Tac Toe
                 <!-- <div class="flex justify-center my-2"><img class="border rounded-2xl " src="/images/tictactoe.png" alt=""></div> -->
                 <div class="text-2xl text-gray-400 my-4">
                     <ul type="none"><li>Implementing a responsive Tic Tac Toe game using JavaScript logic for running the game</li><li>– Tools & technologies used: HTML ,CSS, JavaScript, gitHub, git,VS Code.</li><li>– It helped me to gain knowledge implementing mathematical logic in javascript.</li></ul></div>
             </div>
-            <div class="block my-5  border-2 border-blue-700 px-5 py-5 rounded-3xl text-3xl text-yellow-300" style="text-shadow: none;font-family:cursive;">Weather APP
+            <div class="block my-5 border-b-2 md:border-r-2  border-white px-5 py-5 rounded-3xl text-3xl text-yellow-300" style="text-shadow: none;font-family:cursive;">Weather APP
                 <div class="text-2xl text-gray-400 my-4"><ul type="none"><li>Developed a responsive weather site for showing temperature and other weather parameters of the selected town</li><li>– Tools & technologies used: HTML/CSS, JavaScript, API, VS Code</li><li>– Used JavaScript and API to show the corresponding searched city weather condition.
                 </li><li>– It gave me better knowledge of APIs and their useful features.</li></ul>
                 </div>
             </div>
         </div>
     </section>
-    <section class="projects px-10 py-5 bg-black text-white" style="text-shadow: 3px 3px 6px yellow;" id="project">
+    <section class=" px-10 py-5 bg-black text-white" style="text-shadow: 3px 3px 6px yellow;" id="academics">
         <div class="flex justify-center text-5xl font-bold" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Academics</div>
         <div class="block  md:flex sm:block lg:flex md:justify-evenly lg:justify-evenly  md:space-x-16 md:mx-10 md:my-5 ">
             <div class="block my-5 sm:my-5  border-4 border-white px-5 py-5 rounded-3xl text-3xl text-yellow-300 content-center" style="text-shadow: none;font-family:cursive;"><center><span >95</span>%
@@ -157,6 +195,51 @@
             </div>
         </div>
     </section>
+    <div class="md:flex bg-gray-900 content-center py-40"  id="acheivement" style="background: linear-gradient(90deg,rgb(0, 0, 0),rgb(40, 0, 53));box-shadow: 10px -8px 23px black;" >
+        <div class="AboutMe border-2 border-violet-700 rounded-xl flex-1 mx-10 my-5 px-5 md:px-10 py-5 justify-center">
+            <div class="heading justify-self-center text-3xl md:text-5xl text-white font-bold font-sans ">Acheivements</div>
+            <ul type="None">
+            <li><div class="content content-evenly hover:text-white text-nowrap text-lg py-3 text-gray-700 "><a href="https://leetcode.com/u/iam2103aditya/" target="_blank"><img class="w-8 h-8" src="./images/leetcode.png" alt="">Solved more than 250+ questions on Leetcode (1550+ rating).</a></div></li>
+            <li><div class="content content-evenly hover:text-white text-nowrap text-lg py-3 text-gray-700 "><a href="https://geeksforgeeks.org/user/ghultan21/" target="_blank"><img class="w-12 h-8" src="./images/gfg.png" alt="">Solved more than 450 DSA questions.</a></div></li>
+            <!-- <div class="content content-evenly text-nowrap text-lg py-3 text-gray-700 ">I am a software developer specializing in web development using the MERN stack (MongoDB, Express.js, React, Node.js). I create dynamic and efficient web applications, managing everything from back-end database management with MongoDB to server-side logic with Express.js and Node.js, ensuring robust performance and scalability. On the front end, I utilize React to build interactive, user-friendly interfaces. My skills include JavaScript, RESTful APIs, and deployment practices, making me adept at both full-stack development and modern web technologies. My role is crucial in delivering seamless, responsive, and high-performing web solutions.</div> -->
+            </ul>
+            <!-- <button class="border-2 border-gray-400 text-center text-white hover:bg-white text-xl hover:text-black px-2 py-1 rounded-xl mx-2 my-3">Resume</button>
+            <button class="border-2 border-gray-400 text-center text-white hover:bg-white text-xl hover:text-black px-2 py-1 rounded-xl mx-2 my-3">GitHUB</button> -->
+        </div>
+    </div>
+    <section class="workExperience px-10 py-5 bg-black text-white" style="background: linear-gradient(270deg,rgb(0, 0, 0),rgb(31, 20, 20))" id="experience" style="box-shadow: 0 -7px 5px rgb(255, 8, 8);">
+        <div class="flex justify-center text-5xl font-bold" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Experience</div>
+        <div class="block  sm:block sm:m-auto sm:w-[50%] lg:flex md:justify-evenly  lg:space-x-16 lg:mx-10 lg:my-5 ">
+            <div class="block my-5 lg:w-1/3 bg-gray-900 px-5 py-5 rounded-br-3xl rounded-tl-3xl border-b-white border-r-white text-3xl text-white-300 justify-self-center" style="text-shadow: none;font-family:Protest Revolution; box-shadow: 3px 3px 10px rgb(41, 41, 41);">Tooryanaad Samiti
+                <!-- <div class="flex justify-center my-2"><img class="border rounded-2xl" src="/images/tooryanaad.jpg" alt=""></div> -->
+            <div class="text-2xl  text-white my-4 bg-gray-900" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><ul type="none"><li>Web Developer</li><li>–  Collaborated in developing a new website(MERN) for the society’s use</li><li>– Maintaining the website and timely updates on the site for registering users and providing informtion to the
+                visitors.
+            </div>
+            </div>
+            <div class="block my-5 lg:w-1/3  bg-gray-900 px-5 py-5 rounded-br-3xl rounded-tl-3xl border-b-white border-r-white text-3xl text-white-300 justify-self-center" style="text-shadow: none;font-family:Protest Revolution; box-shadow: 3px 3px 10px rgb(41, 41, 41)">Bharat Intern
+                <!-- <div class="flex justify-center my-2"><img class="border rounded-2xl " src="/images/tictactoe.png" alt=""></div> -->
+                <div class="text-2xl text-white my-4  bg-gray-900 " style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    <ul type="none"><li>Full stack Development Intern</li><li>– Creating a MERN website for signIn and singUp of users.</li><li>– Developing a blog website (frontend)
+                    </li></ul></div>
+            </div>
+        </div>
+    </section>
+    <section class="contactNfooter  bg-black" id="contact">
+        <div class="flex-wrap justify-evenly text-2xl opacity-10 hover:opacity-95 text-white" style="background: rgba(84, 84, 84, 0.283);" >
+            <center>Connect With Me!</center>
+                <ul class=" py-5 my-4 flex space-x-2 justify-center ">
+                    <li class="w-8 content-center "><a target="_blank"  href="mailto:kraditya2073@gmail.com"><img  class=" block" src="/images/contact/mail.png"></a></li>
+                    <li class="w-8 content-center"><a target="_blank"  href="https://wa.me/8434263937"><img src="/images/contact/whatsapp.png"></a></li>
+                    <li class="w-8 content-center"><a target="_blank"  href="https://www.linkedin.com/in/aditya-kumar-330724221"><img src="/images/linkedin.webp"></a></li>
+                    <li class="w-8 content-center"><a target="_blank"  href="https://www.geeksforgeeks.org/user/ghultan21"><img src="/images/gfg.png"></a></li>
+                    <li class="w-8 content-center"><a target="_blank"  href="https://github.com/iamaditya21/"><img src="/images/skills/gitHUb.png"></a></li>
+                    <li class="w-8 content-center"><a target="_blank"  href="https://leetcode.com/u/iam2103aditya"><img src="/images/leetcode.png"></a></li>
+                </ul>
+            <div class="flex justify-center py-2 text-white text-xs">
+                Aditya's Portfolio &#169
+            </div>
+        </div>
+    </section>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
   <script>
@@ -166,17 +249,36 @@
       backSpeed:50,
       loop: true
     });
-  </script>
-  <script>
-    document.addEventListener('scroll', () => {
-      const div = document.getElementById('animatedDiv');
-      const rect = div.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+    let menu = document.getElementById('hamburger');
+    let cross_btn = document.getElementById('cross');
 
-      if (rect.top <= windowHeight && rect.bottom >= 0) {
-        div.classList.add('opacity-100', 'animate-fadeInUp');
-      }
+    cross_btn.addEventListener('click',()=>{
+        // console.log("cross was clicked")
+        const flexMenu = document.getElementById('flex-menu')
+        
+                flexMenu.style.display = 'none'; // Hide the menu
+                cross_btn.style.display = 'none';
     });
+    menu.addEventListener('click',()=>{
+        // console.log("button was clicked")
+        const flexMenu = document.getElementById('flex-menu')
+        
+        if (flexMenu.style.display === 'none' && cross_btn.style.display==='none' ) {
+                flexMenu.style.display = 'block'; // Show the menu
+                cross_btn.style.display = 'block';
+        } else {
+                flexMenu.style.display = 'none'; // Hide the menu
+                cross_btn.style.display = 'none';
+        }
+    });
+    window.addEventListener('resize', () => {
+            const flexMenu = document.getElementById('flex-menu');
+            // const cross_btn = document.getElementById('cross')
+            if (window.innerWidth >= 768) {
+                flexMenu.style.display = 'none';
+                cross_btn.style.display = 'none';
+            }
+        });
   </script>
 </body>
 </html>
